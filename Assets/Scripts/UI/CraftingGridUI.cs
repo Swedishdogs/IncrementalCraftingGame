@@ -9,11 +9,18 @@ public class CraftingGridUI : MonoBehaviour
 
     private ItemSlotUI[] slots;
 
-private void Start()
-{
-    Build();
-    if (grid != null) grid.OnChanged += RefreshAll;
-}
+    void OnEnable()
+    {
+        if (grid != null) grid.OnChanged += RefreshAll;
+        if (slots == null) Build();
+        else RefreshAll();
+    }
+
+    void OnDisable()
+    {
+        if (grid != null) grid.OnChanged -= RefreshAll;
+    }
+
 public void Build()
 {
     if (grid == null) { Debug.LogError("[CraftingGridUI] 'grid' ist nicht zugewiesen.", this); return; }
@@ -43,11 +50,11 @@ public void Build()
 
     public void RefreshAll()
     {
-        foreach (var s in slots) s.Refresh();
+        if (slots == null)
+        {
+            Build();
+            return;
+        }
+        foreach (var s in slots) if (s) s.Refresh();
     }
-private void OnDestroy()
-{
-    if (grid != null) grid.OnChanged -= RefreshAll;
-}
-    
 }

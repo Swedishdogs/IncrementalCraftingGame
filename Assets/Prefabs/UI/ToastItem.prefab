@@ -174,8 +174,8 @@ RectTransform:
   - {fileID: 2760723849650605434}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 163.26562, y: -46.2009}
   m_SizeDelta: {x: 316.5313, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -272,7 +272,6 @@ MonoBehaviour:
   cg: {fileID: 0}
   rt: {fileID: 6070810267952039217}
   background: {fileID: 1012456648504775112}
-  icon: {fileID: 0}
   title: {fileID: 4817168458454651508}
   body: {fileID: 8406940601190061149}
   infoColor: {r: 0.2, g: 0.55, b: 1, a: 1}
@@ -428,7 +427,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

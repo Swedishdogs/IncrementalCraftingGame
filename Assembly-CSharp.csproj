@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Tree\SkillDefinition.cs" />
     <Compile Include="Assets\Scripts\Crafting\CraftingGrid.cs" />
     <Compile Include="Assets\Scripts\UI\SlotHoverDropHint.cs" />
+    <Compile Include="Assets\Scripts\Meta\ResourceStore.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Scripts\Crafting\CraftingManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Scripts\UI\SlotHighlightFlash.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Scripts\UI\ResourceEntryUI.cs" />
     <Compile Include="Assets\Scripts\UI\PanelCoordinator.cs" />
     <Compile Include="Assets\Scripts\UI\Tabs\TabHotkeys.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
@@ -105,15 +107,18 @@
     <Compile Include="Assets\Scripts\UI\ItemSlotUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\Tree\TreeState.cs" />
+    <Compile Include="Assets\Scripts\Meta\GameCalendar.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\UI\PanelToggle.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scripts\UI\Tree\UILineUtil.cs" />
     <Compile Include="Assets\ShortcutMenuController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\Scripts\UI\TopBarUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\Tree\SkillToolbarUI.cs" />
+    <Compile Include="Assets\Scripts\Meta\ResourceDefinition.cs" />
     <Compile Include="Assets\Scripts\UI\Tree\TreePanelController.cs" />
     <Compile Include="Assets\Scripts\UI\DragContext.cs" />
     <Compile Include="Assets\Scripts\UI\Tree\TreeNodeUI.cs" />

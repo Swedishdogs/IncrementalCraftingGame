@@ -24,6 +24,8 @@ public class PanelToggle : MonoBehaviour
 
     [Tooltip("Wenn true, versteckt dieses Panel beim Hide() auch alle anderen Panels.")]
     public bool closeOthersOnHide = false;
+    [Tooltip("Panels, die beim Anzeigen dieses Panels explizit geschlossen werden sollen.")]
+    public PanelToggle[] closeOnShowTargets;
 
     public event System.Action<PanelToggle> OnShown;
     public event System.Action<PanelToggle> OnHidden;
@@ -36,15 +38,8 @@ public class PanelToggle : MonoBehaviour
 
     [Header("Animation")]
     [Min(0f)] public float slideDuration = 0.20f;
-    [Min(0f)] public float bottomPadding = 16f; // wird nur bei Auto genutzt
     public bool startHidden = false;
 
-    [Header("Slide Distance Override")]
-    [Tooltip("Wenn an, wird 'customSlideDistance' benutzt statt Auto-Höhe.")]
-    public bool useCustomSlideDistance = false;
-
-    [Tooltip("Pixel nach UNTEN, die das Panel zum Verstecken bewegt wird.")]
-    [Min(0f)] public float customSlideDistance = 360f;
 
     public bool IsVisible { get; private set; }
 
@@ -88,19 +83,7 @@ public class PanelToggle : MonoBehaviour
         // Sichtbare Position ist die aktuelle Position
         shownPos = panel.anchoredPosition;
 
-        float slideDown;
-        if (useCustomSlideDistance)
-        {
-            slideDown = customSlideDistance;
-        }
-        else
-        {
-            // Auto: komplette Höhe + Padding nach unten
-            float h = panel.rect.height;
-            slideDown = h + bottomPadding;
-        }
-
-        hiddenPos = shownPos + new Vector2(0f, -slideDown);
+        hiddenPos = new Vector2(shownPos.x, 0f);
         initialized = true;
     }
 
@@ -128,6 +111,7 @@ public class PanelToggle : MonoBehaviour
     {
         EnsureSetup();
         if (IsVisible) return;
+        CloseTargets(closeOnShowTargets);
         IsVisible = true;
         if (openButton) openButton.SetActive(false);
         SlideTo(shownPos, enableRaycasts: true, onEnd: () =>
@@ -195,5 +179,16 @@ public class PanelToggle : MonoBehaviour
         var key = PrefsKey;
         if (string.IsNullOrEmpty(key)) return;
         PlayerPrefs.SetInt(key, visible ? 1 : 0);
+    }
+
+    void CloseTargets(PanelToggle[] targets)
+    {
+        if (targets == null || targets.Length == 0) return;
+        for (int i = 0; i < targets.Length; i++)
+        {
+            var t = targets[i];
+            if (!t || t == this) continue;
+            t.Hide();
+        }
     }
 }
