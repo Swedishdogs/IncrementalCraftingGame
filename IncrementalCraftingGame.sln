@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{ffc285c2-3dfb-83bd-71ff-6223fcbd16b0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMPEffectRuntime", "TMPEffectRuntime.csproj", "{3d68905a-74bd-227f-0a3f-0559dfc984ec}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{f41c7873-8665-a9f5-9f59-7cbdfaae3611}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMPEffectEditor", "TMPEffectEditor.csproj", "{2fc4c75a-15d1-fbc6-5017-3533f651ec28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ffc285c2-3dfb-83bd-71ff-6223fcbd16b0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ffc285c2-3dfb-83bd-71ff-6223fcbd16b0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3d68905a-74bd-227f-0a3f-0559dfc984ec}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3d68905a-74bd-227f-0a3f-0559dfc984ec}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{f41c7873-8665-a9f5-9f59-7cbdfaae3611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{f41c7873-8665-a9f5-9f59-7cbdfaae3611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2fc4c75a-15d1-fbc6-5017-3533f651ec28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2fc4c75a-15d1-fbc6-5017-3533f651ec28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
